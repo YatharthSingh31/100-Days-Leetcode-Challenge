@@ -24,9 +24,10 @@ public:
         for (int i = 0; i < (count / 2)-1; i++) {
             temp = temp->next;
         }
-        ListNode* nodeToDelete = temp->next;
-        temp->next = nodeToDelete->next;
-        delete nodeToDelete;
+        // ListNode* nodeToDelete = temp->next;
+        // temp->next = nodeToDelete->next;
+        // delete nodeToDelete;
+        temp->next = temp->next->next;
         return head;
     }
 };
